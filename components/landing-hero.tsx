@@ -10,17 +10,26 @@ export const LandingHero = () => {
   const { isSignedIn } = useAuth();
 
   return (
-    <div className="text-white font-bold py-36 text-center space-y-5">
-      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold">
-        <h1>The Best AI Tool for</h1>
+    <div className="text-white font-bold py-32 text-center space-y-5">
+      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-6 font-extrabold">
+        <h1>Find the perfect gift for</h1>
         <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
           <TypewriterComponent
             options={{
               strings: [
-                "Chatbot.",
-                "Photo Generation.",
-                "Blog Writing.",
-                "Mail Writing."
+                "Ene.",
+                "Oluwatosin.",
+                "Casandra.",
+                "James.",
+                "Ngozi.",
+                "Zainab.",
+                "Chijioke.",
+                "Amina.",
+                "Obinna.",
+                "Ade.",
+                "Fatima.",
+                "Chuka.",
+                "Nia.",
               ],
               autoStart: true,
               loop: true,
@@ -28,18 +37,31 @@ export const LandingHero = () => {
           />
         </div>
       </div>
-      <div className="text-sm md:text-xl font-light text-zinc-400">
-        Create content using AI 10x faster.
+      <div className="flex items-center justify-center">
+        <div className="text-sm md:text-lg max-w-prose font-light text-zinc-300">
+          Givvy is an AI gifting tool that suggests the perfect gift for your
+          friends and loved ones based on their preferences. Create your
+          profile, curate your wishlist and preference and Share it to your
+          contacts to let them gift you easily.
+        </div>
       </div>
+      {/* {isSignedIn ? "/dashboard" : "/sign-up"} */}
       <div>
-        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-          <Button variant="premium" className="md:text-lg p-4 md:p-6 rounded-full font-semibold">
-            Start Generating For Free
+        <Link
+          href="https://docs.google.com/forms/d/e/1FAIpQLScAdCnBwVaToxA49ieVWVmUcueokiy1e3ljvhsd651VfrpKUg/viewform?usp=pp_url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            variant="premium"
+            className="md:text-lg p-4 md:p-6 rounded-full font-semibold"
+          >
+            Get started
           </Button>
         </Link>
       </div>
       <div className="text-zinc-400 text-xs md:text-sm font-normal">
-        No credit card required.
+        Join our waitlist
       </div>
     </div>
   );
