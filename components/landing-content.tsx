@@ -4,35 +4,35 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Joel",
+    name: "Step 1",
     avatar: "J",
-    title: "Software Engineer",
-    description: "This is the best application I've ever used!",
+    title: "Create your profile",
+    description: "Set up your Givvy profile. Provide your preferences and create a wishlist of items you'd love to receive.",
   },
   {
-    name: "Antonio",
+    name: "Step 2",
     avatar: "A",
-    title: "Designer",
-    description: "I use this daily for generating new photos!",
+    title: "Share Your link",
+    description: "Share your Givy link with your contacts and let them gift you either anonymously or opt to reveal their identity",
   },
   {
-    name: "Mark",
+    name: "Step 3",
     avatar: "M",
-    title: "CEO",
-    description: "This app has changed my life, cannot imagine working without it!",
+    title: "Discover and gift contacts",
+    description: "Discover contacts on Givy and gift them their wishlist or let AI suggest an ideal gift based on their preference",
   },
   {
-    name: "Mary",
+    name: "Step 4",
     avatar: "M",
-    title: "CFO",
-    description: "The best in class, definitely worth the premium subscription!",
+    title: "Receive the perfect gift",
+    description: "Receive surprises and surprises from friends and family thats tailored to match your preferences or wishlist",
   },
 ];
 
 export const LandingContent = () => {
   return (
     <div className="px-10 pb-20">
-      <h2 className="text-center text-4xl text-white font-extrabold mb-10">Testimonials</h2>
+      <h2 className="text-center text-3xl text-white font-extrabold mb-10">How to use Givy ?</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {testimonials.map((item) => (
           <Card key={item.description} className="bg-[#192339] border-none text-white">
