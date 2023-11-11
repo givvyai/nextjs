@@ -26,18 +26,25 @@ model UserSubscription {
 }
 
 model Profile {
-  id     String @id @default(cuid())
-  userId String @unique
+  id       String    @id @default(cuid())
+  userId   String    @unique
+  wishlist WishList?
 }
 
 model WishList {
-  id     String @id @default(cuid())
-  userId String @unique
+  id        String         @id @default(cuid())
+  profile   Profile        @relation(fields: [profileId], references: [id])
+  profileId String         @unique
+  wishLists WishListItem[]
 }
 
 model WishListItem {
-  id       String  @id @default(cuid())
-  name     String
-  link     String?
-  tangible Boolean @default(false)
+  id         String   @id @default(cuid())
+  name       String
+  link       String?
+  tangible   Boolean  @default(false)
+  wishList   WishList @relation(fields: [wishListId], references: [id])
+  wishListId String
+
+  @@index([wishListId])
 }
