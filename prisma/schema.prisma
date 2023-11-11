@@ -29,3 +29,15 @@ model Profile {
   id     String @id @default(cuid())
   userId String @unique
 }
+
+model WishList {
+  id     String @id @default(cuid())
+  userId String @unique
+}
+
+model WishListItem {
+  id       String  @id @default(cuid())
+  name     String
+  link     String?
+  tangible Boolean @default(false)
+}
