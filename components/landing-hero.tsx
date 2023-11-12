@@ -45,12 +45,12 @@ export const LandingHero = () => {
           contacts to let them gift you easily.
         </div>
       </div>
-      {/* {isSignedIn ? "/dashboard" : "/sign-up"} */}
+      
       <div>
-        <Link
-          href="https://docs.google.com/forms/d/e/1FAIpQLScAdCnBwVaToxA49ieVWVmUcueokiy1e3ljvhsd651VfrpKUg/viewform?usp=pp_url"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link href={isSignedIn ? "/home" : "/sign-up"}
+          // href="https://docs.google.com/forms/d/e/1FAIpQLScAdCnBwVaToxA49ieVWVmUcueokiy1e3ljvhsd651VfrpKUg/viewform?usp=pp_url"
+          // target="_blank"
+          // rel="noopener noreferrer"
         >
           <Button
             variant="premium"
