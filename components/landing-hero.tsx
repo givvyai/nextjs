@@ -2,13 +2,10 @@
 
 import TypewriterComponent from "typewriter-effect";
 import Link from "next/link";
-import { useAuth } from "@clerk/nextjs";
 
 import { Button } from "@/components/ui/button";
 
 export const LandingHero = () => {
-  const { isSignedIn } = useAuth();
-
   return (
     <div className="text-white font-bold py-32 text-center space-y-5">
       <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-6 font-extrabold">
@@ -45,9 +42,10 @@ export const LandingHero = () => {
           contacts to let them gift you easily.
         </div>
       </div>
-      
+
       <div>
-        <Link href={isSignedIn ? "/home" : "/sign-up"}
+        <Link
+          href={"/sign-up"}
           // href="https://docs.google.com/forms/d/e/1FAIpQLScAdCnBwVaToxA49ieVWVmUcueokiy1e3ljvhsd651VfrpKUg/viewform?usp=pp_url"
           // target="_blank"
           // rel="noopener noreferrer"

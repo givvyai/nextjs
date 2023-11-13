@@ -1,9 +1,13 @@
-import { authMiddleware } from "@clerk/nextjs";
+import { withAuth } from "next-auth/middleware";
 
-export default authMiddleware({
-  publicRoutes: ["/", "/api/webhook"],
+export default withAuth(function middleware(req) {}, {
+  callbacks: {
+    authorized: async ({ req, token }) => {
+      // // const session = await getSession();
+      // if (req.nextUrl.pathname.startsWith("/dashboard")) {
+      //   return false;
+      // }
+      return true;
+    },
+  },
 });
-
-export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
-};

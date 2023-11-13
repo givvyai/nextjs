@@ -20,22 +20,22 @@ export const reviews = [
   {
     avatar:
       "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
-    name: 'Amara',
+    name: "Amara",
     comment: "Amazing experience! Highly recommended.",
   },
   {
     avatar:
       "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
-    name: 'Amara',
+    name: "Amara",
     comment: "Amazing experience! Highly recommended.",
   },
   {
     avatar:
       "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
-    name: 'Amara',
+    name: "Amara",
     comment: "Amazing experience! Highly recommended.",
   },
- 
+
   // Add more review objects as needed
 ];
 
@@ -60,7 +60,7 @@ export const profile = [
   {
     label: "Edit information",
     icon: Edit,
-    href: "/conversation",
+    href: "/profile/edit",
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
   },
@@ -87,21 +87,23 @@ export const profile = [
   },
 ];
 
-
 export const wishlistItems = [
   {
-    name: 'Item 1',
-    imageSrc: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+    name: "Item 1",
+    imageSrc:
+      "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
     icon: GiftIcon,
   },
   {
-    name: 'Item 2',
-    imageSrc: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+    name: "Item 2",
+    imageSrc:
+      "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
     icon: GiftIcon,
   },
   {
-    name: 'Item 3',
-    imageSrc: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+    name: "Item 3",
+    imageSrc:
+      "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
     icon: GiftIcon,
   },
   // {

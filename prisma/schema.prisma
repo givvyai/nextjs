@@ -52,31 +52,16 @@ model User {
   Profile Profile?
 }
 
-model Job {
-  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
-  companyName         String
-  title               String
-  url                 String
-  description         String
-  jobType             String
-  jobField            String
-  location            String
-  requirement         String
-  methodOfApplication String
-  createdAt           DateTime @default(now())
-  companyLogo         String?
-  link                String
-}
-
 model Profile {
-  id               String  @id @default(cuid()) @map("_id")
-  userId           String  @unique
-  user             User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-  age              Int
-  employmentStatus String
-  gender           String
-  jobField         String
-  subScription     String?
+  id     String @id @default(cuid()) @map("_id")
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  gender    String
+  firstName String
+  lastName  String
+  username  String? @unique
+  image     String?
 }
 
 model VerificationToken {

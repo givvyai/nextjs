@@ -1,22 +1,13 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-import { CopyToClipboard } from "react-copy-to-clipboard";
-
-import { CopyIcon } from "lucide-react";
 import { profile } from "@/constants";
+import { getUserProfile } from "@/lib/profile.action";
+import { CopyLink } from "@/components/copu-link";
 
-export default function HomePage() {
-  const router = useRouter();
+export default async function HomePage() {
+  const userProfile = await getUserProfile();
 
-  const linkValue = "https://givy/Akeemtobi"; // Replace this with your actual link value
-
-  const handleCopy = () => {
-    // Handle the copy logic here
-    console.log("Link copied to clipboard!");
-  };
+  const linkValue = `${process.env.NEXTAUTH_URL}/${userProfile?.username}`; // Replace this with your actual link value
 
   return (
     <div>
@@ -24,7 +15,10 @@ export default function HomePage() {
         <div className="aspect-w-1 aspect-h-1">
           <Image
             alt="user image"
-            src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80"
+            src={
+              userProfile?.image ||
+              "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80"
+            }
             className="mx-auto rounded-full object-cover object-center h-20 w-20"
             width={48}
             height={48}
@@ -32,14 +26,11 @@ export default function HomePage() {
         </div>
 
         <div className="text-center p-3">
-          <h1 className="text-2xl font-semibold">@flyingscroll</h1>
+          <h1 className="text-2xl font-semibold">@{userProfile?.username}</h1>
           <p className="text-sm mt-3 flex items-center">
             <span>{linkValue}</span>
-            <CopyToClipboard text={linkValue} onCopy={handleCopy}>
-              <span className="ml-2 cursor-pointer">
-                <CopyIcon />
-              </span>
-            </CopyToClipboard>
+
+            <CopyLink link={linkValue} />
           </p>
         </div>
       </div>
