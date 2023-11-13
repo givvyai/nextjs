@@ -19,31 +19,38 @@ export const getUserProfile = async (userId?: string) => {
 
 export const updateUserProfile = async (form: FormData) => {
   const session = await getSession();
-  const data: Prisma.ProfileUpdateInput = Object.fromEntries(form);
+  const data = Object.fromEntries(form);
 
   console.log({ data });
 
   try {
     // check if profile exists
     const userP = await getUserProfile(session?.user?.id!);
-    if (userP) {
-      const profile = await prisma.profile.update({
-        where: {
-          id: session?.user?.id,
-        },
-        data: {
-          firstName: data.firstName || userP.firstName,
-          lastName: data.lastName || userP.lastName,
+    const profile = await prisma.profile.upsert({
+      where: {
+        id: session?.user?.id,
+      },
+      update: {
+        firstName: (data.firstName as string) || userP?.firstName,
+        lastName: (data.lastName as string) || userP?.lastName,
 
-          gender: data.gender || userP.gender,
-          username: data.username || userP.username,
+        gender: (data.gender as string) || userP?.gender,
+        username: (data.username as string) || userP?.username,
+      },
+      create: {
+        firstName: data.firstName as string,
+        lastName: data.lastName as string,
+
+        gender: data.gender as string,
+        username: data.username as string,
+        user: {
+          connect: {
+            id: session?.user?.id,
+          },
         },
-      });
-      return profile;
-    } else {
-      const profile = await createUserProfile(session?.user?.id!, data);
-      return profile;
-    }
+      },
+    });
+    return profile;
   } catch (err) {
     console.log({ err });
   } finally {
@@ -90,8 +97,8 @@ export const updateProfileImage = async (image: string, username?: string) => {
   }
 };
 
-const getPulicUserProfile = async (username: string) => {
-  const profile = await prisma.profile.findUnique({
+export const getPulicUserProfile = async (username: string) => {
+  const profile = await prisma.profile.findFirst({
     where: {
       username,
     },

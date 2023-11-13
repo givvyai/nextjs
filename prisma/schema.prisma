@@ -60,7 +60,7 @@ model Profile {
   gender    String
   firstName String
   lastName  String
-  username  String? @unique
+  username  String  @unique
   image     String?
 }
 
