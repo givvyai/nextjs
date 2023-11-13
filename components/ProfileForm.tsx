@@ -1,5 +1,4 @@
 "use client";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
 import { updateProfile } from "@/lib/actions";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -33,10 +32,9 @@ export const ProfileForm = () => {
   );
 };
 function Submit() {
-  const { pending, data, method, action } = useFormStatus();
   return (
     <Button type="submit">
-      {pending ? <Loader2 className="animate-spin" /> : "Submit"}
+      {"" ? <Loader2 className="animate-spin" /> : "Submit"}
     </Button>
   );
 }
