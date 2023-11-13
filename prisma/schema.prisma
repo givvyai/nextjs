@@ -28,6 +28,7 @@ model UserSubscription {
 model Profile {
   id       String    @id @default(cuid())
   userId   String    @unique
+  gender   String
   wishlist WishList?
 }
 
