@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs";
 
-import prismadb from "@/lib/prismadb";
+import prismadb from "@/lib/prisma";
 import { MAX_FREE_COUNTS } from "@/constants";
 
 export const incrementApiLimit = async () => {
@@ -53,8 +53,8 @@ export const getApiLimitCount = async () => {
 
   const userApiLimit = await prismadb.userApiLimit.findUnique({
     where: {
-      userId
-    }
+      userId,
+    },
   });
 
   if (!userApiLimit) {
