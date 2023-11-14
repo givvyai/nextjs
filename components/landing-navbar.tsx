@@ -3,7 +3,6 @@
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { useAuth } from "@clerk/nextjs";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -11,8 +10,6 @@ import { Button } from "@/components/ui/button";
 const font = Montserrat({ weight: "600", subsets: ["latin"] });
 
 export const LandingNavbar = () => {
-  const { isSignedIn } = useAuth();
-
   return (
     <nav className="p-4 bg-transparent flex items-center justify-between">
       <Link href="/" className="flex items-center">
@@ -24,8 +21,8 @@ export const LandingNavbar = () => {
         </h1>
       </Link>
       <div className="flex items-center gap-x-2">
-        
-        <Link href={isSignedIn ? "/home" : "/sign-up"}
+        <Link
+          href={"/sign-up"}
           // href="https://docs.google.com/forms/d/e/1FAIpQLScAdCnBwVaToxA49ieVWVmUcueokiy1e3ljvhsd651VfrpKUg/viewform?usp=pp_url"
           // target="_blank"
           // rel="noopener noreferrer"

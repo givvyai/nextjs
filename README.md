@@ -1,4 +1,6 @@
+# Next13 SAAS tool starter
 
+=======
 
 Features:
 
@@ -8,10 +10,7 @@ Features:
 - Clerk Authentication (Email, Google, 9+ Social Logins)
 - Client form validation and handling using react-hook-form
 - Server error handling using react-toast
-- Image Generation Tool (Open AI)
-- Video Generation Tool (Replicate AI)
-- Conversation Generation Tool (Open AI)
-- Music Generation Tool (Replicate AI)
+- AI suggestions (Open AI)
 - Page loading state
 - Stripe monthly subscription
 - Free tier with API limiting
@@ -38,7 +37,6 @@ npm i
 ```
 
 ### Setup .env file
-
 
 ```js
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
@@ -79,6 +77,6 @@ npm run dev
 
 Running commands with npm `npm run [command]`
 
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
+| command | description                              |
+| :------ | :--------------------------------------- |
+| `dev`   | Starts a development instance of the app |
