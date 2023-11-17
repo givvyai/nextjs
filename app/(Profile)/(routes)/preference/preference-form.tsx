@@ -114,10 +114,14 @@ export function PreferenceForm() {
                     <SelectValue placeholder="Select" />
                   </SelectTrigger>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <SelectContent>
 =======
                   <SelectContent position="popper">
 >>>>>>> 3405e0b (lotss..)
+=======
+                  <SelectContent>
+>>>>>>> 56213ce (landing.)
                     <SelectItem value="male">Male</SelectItem>
                     <SelectItem value="female">Female</SelectItem>
                   </SelectContent>
@@ -139,10 +143,14 @@ export function PreferenceForm() {
                     <SelectValue placeholder="Select" />
                   </SelectTrigger>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <SelectContent>
 =======
                   <SelectContent position="popper">
 >>>>>>> 3405e0b (lotss..)
+=======
+                  <SelectContent>
+>>>>>>> 56213ce (landing.)
                     <SelectItem value="tangible">Tangible gift</SelectItem>
                     <SelectItem value="experiences">Experiences</SelectItem>
                     <SelectItem value="any">Any</SelectItem>
@@ -154,9 +162,13 @@ export function PreferenceForm() {
           )}
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 3405e0b (lotss..)
+=======
+
+>>>>>>> 56213ce (landing.)
         <FormField
           control={form.control}
           name="hobbyInterest"
