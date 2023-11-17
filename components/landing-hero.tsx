@@ -33,8 +33,8 @@ export const LandingHero = () => {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <div className="text-sm md:text-lg max-w-prose font-light text-zinc-300">
-          Givvy is an AI gifting tool that suggests the perfect gift for your
+        <div className="mx-10 text-sm md:text-lg max-w-prose font-light text-zinc-300">
+          Givv is an AI gifting tool that suggests the perfect gift for your
           friends and loved ones based on their preferences. Create your
           profile, curate your wishlist and preference and Share it to your
           contacts to let them gift you easily.
@@ -49,6 +49,10 @@ export const LandingHero = () => {
         >
           <Button
             variant="outline"
+<<<<<<< HEAD
+=======
+            style={{ color: "#D8E4FF", borderColor: "#D8E4FF" }}
+>>>>>>> 3405e0b (lotss..)
             className="md:text-lg p-4 md:p-6 rounded-full font-semibold"
           >
             Get started
