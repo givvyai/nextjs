@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # Next13 SAAS tool starter
 
 =======
+=======
+
+>>>>>>> 3d0c384 (Update README.md)
 
 Features:
 
