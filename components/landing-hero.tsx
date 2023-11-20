@@ -7,21 +7,19 @@ import { Button } from "@/components/ui/button";
 
 export const LandingHero = () => {
   return (
-    <div className="text-white font-bold py-32 text-center space-y-5">
-      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-6 font-extrabold">
+    <div className="text-[#D8E4FF] font-bold py-32 text-center space-y-5">
+      <div className="text-4xl  sm:text-5xl md:text-6xl lg:text-7xl space-y-6 font-extrabold">
         <h1>Find the perfect gift for</h1>
         <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
           <TypewriterComponent
             options={{
               strings: [
-                "Ene.",
-                "Oluwatosin.",
                 "Casandra.",
                 "James.",
+                "Ene.",
                 "Ngozi.",
                 "Zainab.",
                 "Chijioke.",
-                "Amina.",
                 "Obinna.",
                 "Ade.",
                 "Fatima.",
@@ -44,14 +42,13 @@ export const LandingHero = () => {
       </div>
 
       <div>
-        <Link
-          href={"/sign-up"}
+       <Link href={"/sign-up"}
           // href="https://docs.google.com/forms/d/e/1FAIpQLScAdCnBwVaToxA49ieVWVmUcueokiy1e3ljvhsd651VfrpKUg/viewform?usp=pp_url"
           // target="_blank"
           // rel="noopener noreferrer"
         >
           <Button
-            variant="premium"
+            variant="outline"
             className="md:text-lg p-4 md:p-6 rounded-full font-semibold"
           >
             Get started

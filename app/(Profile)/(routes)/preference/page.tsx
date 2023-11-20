@@ -1,10 +1,10 @@
 import { Separator } from "@/components/ui/separator"
-import { SettingForm } from "./setting-form"
+import { PreferenceForm } from "./preference-form"
 
 export default function SettingsProfilePage() {
   return (
-    <main>
-      <SettingForm />
-    </main>
+    <div>
+      <PreferenceForm />
+    </div>
   )
 }

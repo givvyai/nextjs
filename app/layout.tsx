@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
 import { ToasterProvider } from "@/components/toaster-provider";
 import { ModalProvider } from "@/components/modal-provider";
 import { EdgeStoreProvider } from "@/lib/edgestore";
 
 import "./globals.css";
+import { Inter as FontSans } from "next/font/google"
+ 
+import { cn } from "@/lib/utils"
 
-const font = Inter({ subsets: ["latin"] });
+export const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: "Givys",
@@ -21,7 +25,12 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={font.className}>
+      <body
+        className={cn(
+          "min-h-screen bg-[#FFF7F0] font-sans antialiased",
+          fontSans.variable
+        )}
+      >
         <EdgeStoreProvider>
           <ToasterProvider />
           <ModalProvider />
