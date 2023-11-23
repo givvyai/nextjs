@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { CopyIcon } from "lucide-react";
 import { profile } from "@/constants";
 import { ShareProfileDialog } from "./shareprofile";
+import { useEffect } from "react";
 
 export default function HomePage() {
   const { toast } = useToast();
@@ -20,7 +21,30 @@ export default function HomePage() {
     // Handle the copy logic here
     console.log("Link copied to clipboard!");
   };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const res = await fetch("/api/profile");
+  //     const json = await res.json();
+  //     console.log({ json });
+  //     if (json === null) {
+  //       // create profile
 
+  //       const postres = await fetch("/api/profile", {
+  //         method: "POST",
+  //         body: JSON.stringify({
+  //           firstName: "String",
+  //           gender: "String",
+  //           image: "String",
+  //           lastName: "String",
+  //           username: "String",
+  //         }),
+  //       });
+  //       const postjson = await postres.json();
+  //       console.log({ postjson });
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
   return (
     <div>
       <div className="mt-10 flex flex-col items-center justify-center">
