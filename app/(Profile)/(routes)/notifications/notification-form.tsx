@@ -1,6 +1,6 @@
 // NotificationForm.tsx
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NOTIFICATIONS } from "@/constants";
 import {
   Card,
@@ -29,6 +29,27 @@ export const NotificationForm: React.FC = () => {
   const closeDialog = () => {
     setSelectedNotification(null);
   };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const res = await fetch("/api/notification");
+  //     const json = await res.json();
+  //     console.log({ json });
+  //     if (json.notifications.length < 1) {
+  //       // create profile
+
+  //       const postres = await fetch("/api/notification", {
+  //         method: "POST",
+  //         body: JSON.stringify({
+  //           title: "String",
+  //           message: "String",
+  //         }),
+  //       });
+  //       const postjson = await postres.json();
+  //       console.log({ postjson });
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <div>
