@@ -10,14 +10,26 @@ datasource db {
 model Profile {
   id             String        @id @default(auto()) @map("_id") @db.ObjectId
   firstName      String
-  gender         String
-  image          String
+  gender         String?
   lastName       String
   userId         String
   username       String        @unique
+  birthday    String?
+  accountNo String?
+  bankName String?
+  age Int?
+  preferredGiftType String?
+  description String?
+  occupation String?
+  hobbies String[]
+  socialLinks String[]
+  allowEmailNotifications Boolean @default(false)
+  keepIdentityAnon Boolean @default(true)
   WishListItem   WishListItem? @relation(fields: [wishListItemId], references: [id])
   wishListItemId String?       @db.ObjectId
 }
+
+
 
 model Notification {
   id      String  @id @default(auto()) @map("_id") @db.ObjectId
