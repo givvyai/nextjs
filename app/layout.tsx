@@ -24,10 +24,18 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+<<<<<<< HEAD
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-[#FFF7F0] font-sans antialiased",
+=======
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        {/* <CrispProvider /> */}
+        <body  className={cn(
+          " bg-[#FFF7F0] font-sans antialiased",
+>>>>>>> 47eee2d (changes)
           fontSans.variable
         )}
       >

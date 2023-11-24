@@ -9,8 +9,6 @@ const DashboardLayout = async ({
 }: {
   children: React.ReactNode
 }) => {
-  const apiLimitCount = await getApiLimitCount();
-  const isPro = await checkSubscription();
 
   return ( 
     <div className="mx-auto max-w-6xl px-6 h-full relative">
