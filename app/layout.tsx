@@ -25,10 +25,14 @@ export default async function RootLayout({
 }) {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 984c71e (layout)
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-[#FFF7F0] font-sans antialiased",
+<<<<<<< HEAD
 =======
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
@@ -36,6 +40,8 @@ export default async function RootLayout({
         <body  className={cn(
           " bg-[#FFF7F0] font-sans antialiased",
 >>>>>>> 47eee2d (changes)
+=======
+>>>>>>> 984c71e (layout)
           fontSans.variable
         )}
       >
